@@ -10,6 +10,9 @@
 		<summary>misty's k19-addons</summary>
 		<description>Download and install addons by misty</description>
 		<platform>all</platform>
+		<assets>
+            <icon>icon.png</icon>
+        </assets>
 	</extension>
 </addon>
 
@@ -23,6 +26,9 @@
 		<summary>misty's k19-addons</summary>
 		<description>Download and install addons by misty</description>
 		<platform>all</platform>
+		<assets>
+            <icon>icon.png</icon>
+        </assets>
 	</extension>
 </addon>
 
