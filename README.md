@@ -1,2 +1,2 @@
-addons
+k19-addons
 ======
