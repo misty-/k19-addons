@@ -2,7 +2,7 @@
     common XBMC Module
     Copyright (C) 2011 t0mm0
 
-    Updated by misty June 2020 for Kodi 19 (Matrix) python3
+    Updated by misty for Kodi 19 (Matrix) python3
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-import cgi
+#import cgi
 import re
 import os
 import pickle
@@ -186,7 +186,7 @@ class Addon:
             from the query string. If a key is repeated in the query string
             its value will be a list containing all of that keys values.  
         '''
-        queries = cgi.parse_qs(query)
+        queries = urllib.parse.parse_qs(query)#cgi.parse_qs(query)
         q = defaults
         for key, value in list(queries.items()):
             if len(value) == 1:
@@ -225,7 +225,7 @@ class Addon:
         return self.url + '?' + urllib.parse.urlencode(out_dict)
 
 
-    def log(self, msg, level=xbmc.LOGNOTICE):
+    def log(self, msg, level=xbmc.LOGINFO):
         '''
         Writes a string to the XBMC log file. The addon name is inserted into 
         the beginning of the message automatically to help you find relevent 
@@ -239,7 +239,7 @@ class Addon:
             xbmc.LOGFATAL = 6
             xbmc.LOGINFO = 1
             xbmc.LOGNONE = 7
-            xbmc.LOGNOTICE = 2
+            xbmc.LOGINFO = 2
             xbmc.LOGSEVERE = 5
             xbmc.LOGWARNING = 3
         
@@ -278,11 +278,11 @@ class Addon:
     def log_notice(self, msg):
         '''
         Convenience method to write to the XBMC log file at the 
-        ``xbmc.LOGNOTICE`` error level. Use for general log messages. This will
+        ``xbmc.LOGINFO`` error level. Use for general log messages. This will
         show up in the log prefixed with 'NOTICE:' whether you have debugging 
         switched on or not.
         '''
-        self.log(msg, xbmc.LOGNOTICE)    
+        self.log(msg, xbmc.LOGINFO)    
 
 
     def show_ok_dialog(self, msg, title=None, is_error=False):
