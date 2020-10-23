@@ -1,8 +1,0 @@
-Ver. 3.0.01
-
-Best of NHK
-
-Kodi 19.x is the minimum version for this add-on.
-Best of NHK add-on is now compatible with Kodi 19
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
